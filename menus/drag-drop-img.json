@@ -1,0 +1,26 @@
+{
+  "context-menu": {
+    "atom-text-editor": [
+      {
+        "label": "Toggle drag-drop-img",
+        "command": "drag-drop-img:toggle"
+      }
+    ]
+  },
+  "menu": [
+    {
+      "label": "Packages",
+      "submenu": [
+        {
+          "label": "drag-drop-img",
+          "submenu": [
+            {
+              "label": "Toggle",
+              "command": "drag-drop-img:toggle"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
