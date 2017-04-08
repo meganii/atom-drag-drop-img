@@ -8,11 +8,12 @@ import DragDropImg from '../lib/drag-drop-img';
 // or `fdescribe`). Remove the `f` to unfocus the block.
 
 describe('DragDropImg', () => {
-  let workspaceElement, activationPromise;
+  let workspaceElement, activationPromise, openEditorPromise;
 
   beforeEach(() => {
     workspaceElement = atom.views.getView(atom.workspace);
     activationPromise = atom.packages.activatePackage('drag-drop-img');
+    openEditorPromise = atom.workspace.open('test.markdown');
   });
 
   describe('when the drag-drop-img:toggle event is triggered', () => {
@@ -67,6 +68,24 @@ describe('DragDropImg', () => {
         expect(dragDropImgElement).toBeVisible();
         atom.commands.dispatch(workspaceElement, 'drag-drop-img:toggle');
         expect(dragDropImgElement).not.toBeVisible();
+      });
+    });
+
+    it('is my first test code', () => {
+      // <hugo project path>/static/images/2017/04/<image-filename>.<extname>
+      waitsForPromise(() => {
+        return openEditorPromise;
+      });
+
+      runs(() => {
+        console.log(openEditorPromise);
+        const editor = atom.workspace.getActiveTextEditor();
+        const target_file = editor.getPath();
+
+        const project_path = atom.project.getPaths().length > 0 ? atom.project.getPaths()[0] : "";
+        expect("ng").toBe(project_path);
+        expect("test").toBe(target_file);
+
       });
     });
   });
