@@ -88,5 +88,16 @@ describe('DragDropImg', () => {
 
       });
     });
+
+    it('copy drop file to static dir', () => {
+      const fs = require('fs');
+      fs.createReadStream('test.markdown').pipe(fs.createWriteStream('hoge.markdown'));
+    });
+
+    it('create todays folder',() => {
+      const moment = require('moment');
+      expect('2017/04').toBe(moment().format('YYYY/MM'));
+    });
+
   });
 });
