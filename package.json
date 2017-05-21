@@ -1,14 +1,13 @@
 {
   "name": "drag-drop-img",
   "main": "./lib/drag-drop-img",
-  "version": "0.0.0",
-  "description": "A short description of your package",
-  "keywords": [
-  ],
+  "version": "0.0.1",
+  "description": "Drag & Drop image files into Atom.",
+  "keywords": [],
   "activationCommands": {
     "atom-workspace": "drag-drop-img:toggle"
   },
-  "repository": "https://github.com/atom/drag-drop-img",
+  "repository": "https://github.com/meganii/atom-drag-drop-img",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
