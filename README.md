@@ -1,5 +1,18 @@
 # drag-drop-img package
 
-A short description of your package.
+You are able to drag & drop image files if you use this package.
 
-![A screenshot of your package](https://f.cloud.github.com/assets/69169/2290250/c35d867a-a017-11e3-86be-cd7c5bf3ff9b.gif)
+# How to use
+
+1. Installing ImageMagick and GraphicsMagick
+2. Toggle `Drag Drop Img: Toggle`
+3. Drag & Drop image files
+
+## Require
+
+This plugin need ImageMagick and GraphicsMagick.
+
+```
+brew install ImageMagick
+brew install GraphicsMagick
+```
